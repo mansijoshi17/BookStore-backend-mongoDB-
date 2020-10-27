@@ -31,7 +31,7 @@ app.post('/books/addbook', (req, res) => {
 
     newBook.save()
         .then(item => {
-            return res.status(200).json({ success: true, data: newBook })
+            return res.status(200).json({ success: true, data: item })
         })
         .catch(err => console.log(err));
 });
